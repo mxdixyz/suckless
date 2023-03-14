@@ -1,5 +1,4 @@
 #!/bin/sh
-# See LICENSE file for copyright and license details
 BAT=0
 for battery in /sys/class/power_supply/BAT?
 do
@@ -9,6 +8,6 @@ do
 		Discharging) status=- ;;
 		*) status=• ;;
 	esac
-	echo -n [BAT$BAT: $status$capacity]
+	printf "[BAT%i: %s%i]" $BAT $status $capacity
 	((BAT++))
 done

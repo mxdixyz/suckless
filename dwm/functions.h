@@ -2,6 +2,7 @@
 static const char *shutdowncmd[] = { "suckless/dwm/scripts/shutdown.sh", NULL };
 static const char *rebootcmd[] = { "suckless/dwm/scripts/reboot.sh", NULL };
 static const char *exitcmd[] = { "suckless/dwm/scripts/exit.sh", NULL };
+static const char *transcmd[] = { "suckless/dwm/scripts/translate.sh", NULL };
 
 /* volume control */
 static const char *volupcmd[] = { "pulsemixer", "--change-volume", "+15", NULL };
@@ -18,3 +19,6 @@ static const char *prtscrcmd[] = { "flameshot", "gui", NULL };
 
 /* screen lock (slock) */
 static const char *hibernatecmd[] = { "slock", NULL };
+
+/* pass */
+static const char *passcmd[] = { "passmenu", NULL };

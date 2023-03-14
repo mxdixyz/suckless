@@ -8,7 +8,7 @@ static const struct arg args[] = {
 	{ cpu_perc,		"[ %s%%]",		NULL							},
 	{ ram_perc, 	"[ %s%% - ",	NULL							},
 	{ ram_used, 	"%s] | ",		NULL							},
-	{ run_command,	"%s",			"suckless/slstatus/printbat.sh"	},
+	{ run_command,	"%s",			"suckless/slstatus/dynbat.sh"	},
 	{ kanji,		" | (%s) ",		NULL							},
 	{ datetime,		"%s ",			"%D | %T"						},
 };

@@ -1,4 +1,4 @@
-/* See LICENSE file for copyright and license details */
+// See LICENSE file for copyright and license details
 static const unsigned int borderpx  = 2;            // border pixel of windows
 static const unsigned int gappx     = 5;            // gaps between windows
 static const unsigned int snap      = 32;           // snap pixel
@@ -87,10 +87,12 @@ static Key keys[] = {
     { MODKEY,                        XK_period,   focusmon,         {.i = +1                  } },
     { MODKEY|ShiftMask,              XK_comma,    tagmon,           {.i = -1                  } },
     { MODKEY|ShiftMask,              XK_period,   tagmon,           {.i = +1                  } },
+    { MODKEY|ShiftMask,              XK_p,        spawn,            {.v = passcmd             } },    // launch passmenu
     // dmenu scripts
     { MODKEY|ShiftMask,              XK_s,        spawn,            {.v = shutdowncmd         } },    // dmenu prompt to shutdown
     { MODKEY|ShiftMask,              XK_r,        spawn,            {.v = rebootcmd           } },    // dmenu prompt to reboot
     { MODKEY|ShiftMask,              XK_q,        spawn,            {.v = exitcmd             } },    // dmenu prompt to exit dwm
+    { MODKEY|ShiftMask,              XK_space,    spawn,            {.v = transcmd            } },    // dmenu frontend for translate-shell
     // patches
     { MODKEY,                        XK_minus,    setgaps,          {.i = -1                  } },    // decrease gap size
     { MODKEY,                        XK_equal,    setgaps,          {.i = +1                  } },    // increase gap size
