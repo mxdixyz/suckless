@@ -6,11 +6,29 @@ include config.mk
 
 REQ = util
 COM =\
+	components/battery\
+	components/cat\
 	components/cpu\
 	components/datetime\
+	components/disk\
+	components/entropy\
+	components/hostname\
+	components/ip\
 	components/kanji\
+	components/kernel_release\
+	components/keyboard_indicators\
+	components/keymap\
+	components/load_avg\
+	components/netspeeds\
+	components/num_files\
 	components/ram\
-	components/run_command
+	components/run_command\
+	components/swap\
+	components/temperature\
+	components/uptime\
+	components/user\
+	components/volume\
+	components/wifi
 
 all: slstatus
 
@@ -45,7 +63,9 @@ install: all
 	mkdir -p "$(DESTDIR)$(MANPREFIX)/man1"
 	cp -f slstatus.1 "$(DESTDIR)$(MANPREFIX)/man1"
 	chmod 644 "$(DESTDIR)$(MANPREFIX)/man1/slstatus.1"
+	./scriptconf.sh init
 
 uninstall:
 	rm -f "$(DESTDIR)$(PREFIX)/bin/slstatus"
 	rm -f "$(DESTDIR)$(MANPREFIX)/man1/slstatus.1"
+	./scriptconf.sh remove

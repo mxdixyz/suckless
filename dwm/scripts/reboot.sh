@@ -1,3 +1,4 @@
 #!/bin/sh
-# Opens a prompt in dmenu to reboot the system
+# Written by Madison Lynch <madi@mxdi.xyz>
+# https://deadgirl.dev
 [ $(echo -e "No\nYes" | dmenu -i -p "Do you want to reboot?") == "Yes" ] && reboot
