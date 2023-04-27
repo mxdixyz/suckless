@@ -1,8 +1,8 @@
 /* scripts */
-static const char *shutdowncmd[] = { ".config/dwm/scripts/shutdown.sh", NULL };
-static const char *rebootcmd[] = { ".config/dwm/scripts/reboot.sh", NULL };
-static const char *exitcmd[] = { ".config/dwm/scripts/exit.sh", NULL };
-static const char *transcmd[] = { ".config/dwm/scripts/translate.sh", NULL };
+static const char *shutdowncmd[] = { ".config/dwm/shutdown.sh", NULL };
+static const char *rebootcmd[] = { ".config/dwm/reboot.sh", NULL };
+static const char *exitcmd[] = { ".config/dwm/exit.sh", NULL };
+static const char *transcmd[] = { ".config/dwm/translate.sh", NULL };
 
 /* volume control */
 static const char *volupcmd[] = { "pulsemixer", "--change-volume", "+15", NULL };
